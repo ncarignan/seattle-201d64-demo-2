@@ -23,7 +23,7 @@
     yay
   else
     nay
-  */
+*/
 
 var theAnswer = prompt('is nich?');
 
@@ -39,5 +39,55 @@ if(theAnswer === 'yes' || theAnswer === 'Y' || theAnswer === 'y'){
 }
 
 
-// var howTallTheyThinkNichIs = prompt('how tall is nich');
+var howTallTheyThinkNichIs = prompt('how tall is nich');
+// prompt returns a string
+// the number 73 !== '73' // !== opposite of ===
+
+if(howTallTheyThinkNichIs === '73'){
+  console.log('how did you know? he\'s sitting');
+} else {
+  console.log('try again');
+  howTallTheyThinkNichIs = prompt('nope');
+  console.log('howTall : ', howTallTheyThinkNichIs);
+  console.log('howTall type : ', typeof howTallTheyThinkNichIs);
+  if(howTallTheyThinkNichIs === '73'){
+    alert('finally! nice work');
+  } else {
+    alert('you failed');
+
+  }
+}
+
+var nichAgeGuess;
+
+nichAgeGuess = prompt('how old do you think nich is?');
+var nichAgeGuessAsANumber = parseInt(nichAgeGuess); // parseInt turns a string to a number
+
+if (nichAgeGuessAsANumber > 20 && nichAgeGuessAsANumber < 40){
+  alert('you are in the ballpark');
+} else if( nichAgeGuessAsANumber < 20) {
+  alert('way too low');
+} else if(nichAgeGuessAsANumber > 40){
+  alert('way too high');
+} else {
+  alert('idk what you said but it was not a number, dum dum');
+}
+
+//confirm returns true or false
+var nichIsATeacherGuess = confirm('is nich a teacher');
+
+// if(nichIsATeacherGuess === true){
+//   alert('yep');
+// } else {
+//   alert('nope');
+// }
+
+// these are the same
+
+if (nichIsATeacherGuess) {
+  alert('yep');
+} else {
+  alert('nope');
+}
+
 
